@@ -1,4 +1,4 @@
-# Projeto de API REST Vendas usando o framework Quarkus
+# Projeto de API REST Vendas usando o framework Quarkus [![maven](https://github.com/manoelcampos/vendas-rest-quarkus/actions/workflows/maven.yml/badge.svg)](https://github.com/manoelcampos/vendas-rest-quarkus/actions/workflows/maven.yml)
 
 Este projeto usa o Quarkus, o _**Supersonic Subatomic Java Framework**_. A estrutura inicial deste projeto foi gerada em https://code.quarkus.io. Mas se você usa o IntelliJ IDEA Ultimate, ele já tem suporte nativo criar e executar projetos Quarkus. No IntelliJ Community, você pode instalar o [plugin do Quarkus](https://plugins.jetbrains.com/plugin/13234-quarkus-tools). O Visual Studio Code possui uma [extensão para Quarkus](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-quarkus) também.  
 
