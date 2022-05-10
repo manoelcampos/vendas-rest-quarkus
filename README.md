@@ -1,15 +1,18 @@
-# Vendas Project
+# Projeto de API REST Vendas usando o framework Quarkus
 
-This project uses Quarkus, the Supersonic Subatomic Java Framework.
+Este projeto usa o Quarkus, o _**Supersonic Subatomic Java Framework**_. A estrutura inicial deste projeto foi gerada em https://code.quarkus.io. Mas se você usa o IntelliJ IDEA Ultimate, ele já tem suporte nativo criar e executar projetos Quarkus. No IntelliJ Community, você pode instalar o [plugin do Quarkus](https://plugins.jetbrains.com/plugin/13234-quarkus-tools). O Visual Studio Code possui uma [extensão para Quarkus](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-quarkus) também.  
 
-If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
+Se você quer aprender mais sobre Quarkus, visite https://quarkus.io.
 
-## Running the application in dev mode
+## Executando a aplicação no mode de desenvolvimento
 
-You can run your application in dev mode that enables live coding using:
+Você pode rodar sua aplicação no mode dev, que habilita o _live coding_, usando;
+
 ```shell script
 ./mvnw compile quarkus:dev
 ```
+
+O _live coding_ é também conhecido como _hot reload_. Normalmente basta salvar as alterações no seu projeto e o Quarkus irá detectar as alterações, compilar e recarregar à aplicação. Tudo isso normalmente em uma fração de segundo.
 
 > **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at http://localhost:8080/q/dev/.
 
