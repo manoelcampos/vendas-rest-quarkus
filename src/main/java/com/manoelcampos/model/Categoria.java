@@ -4,13 +4,12 @@ import io.quarkus.hibernate.orm.panache.PanacheEntity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 public class Categoria extends PanacheEntity {
     @Column(unique = true, nullable = false)
+    @NotBlank
     private String descricao;
 
     public Long getId() {
