@@ -16,6 +16,16 @@ O _live coding_ é também conhecido como _hot reload_. Normalmente basta salvar
 
 > **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at http://localhost:8080/q/dev/.
 
+
+## Testando os serviços REST usando extensões dos navegadores
+
+Você pode utilizar o próprio navegador para testar seus endpoints REST. Assim, você terá uma interface amigável e intuitiva, facilitando muito os testes. A seguir são exibidas opções para Firefox e Chrome.
+
+- Para o Firefox você pode baixar o plugin https://addons.mozilla.org/pt-BR/firefox/addon/restclient/[RESTClient].
+- Para o Google Chrome utilizo a excelente extensão https://chrome.google.com/webstore/detail/restlet-client-rest-api-t/aejoelaoggembcahagimdiliamlcdmfm/[Talend API Tester (antigo Restlet Client)].
+
+A extensão _Talend API Tester_ tem um recurso extremamente útil de permitir criar projetos e salvar diferentes requisições HTTP dentro deste projeto. Assim, podemos facilmente reenviar tais requisições sem ter que configurá-las novamente.
+
 ## Packaging and running the application
 
 The application can be packaged using:
