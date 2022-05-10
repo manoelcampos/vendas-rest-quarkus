@@ -4,6 +4,13 @@ Este projeto usa o Quarkus, o _**Supersonic Subatomic Java Framework**_. A estru
 
 Se você quer aprender mais sobre Quarkus, visite https://quarkus.io.
 
+## Configurando a aplicação para execução
+
+Antes de rodar a aplicação você deve abrir o arquivo e verificar
+se as configurações no arquivo [application.properties](src/main/resources/application.properties) estão corretas para o seu ambiente de desenvolvimento (como o tipo de BD usado).
+
+Informações sensíveis como nome de usuário e senha (do servidor de BD, por exemplo), devem ser informadas em um arquivo `.env`. Para isto, faça uma cópia do arquivo [.env.dist](.env.dist), renomeando para `.env` e edite tais informações neste arquivo.
+
 ## Executando a aplicação no mode de desenvolvimento
 
 Você pode rodar sua aplicação no mode dev, que habilita o _live coding_, usando;
