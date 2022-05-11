@@ -90,3 +90,15 @@ If you want to learn more about building native executables, please consult http
 - Hibernate ORM with Panache ([guide](https://quarkus.io/guides/hibernate-orm-panache)): Simplify your persistence code for Hibernate ORM via the active record or the repository pattern
 - Agroal - Database connection pool ([guide](https://quarkus.io/guides/datasource)): Pool JDBC database connections (included in Hibernate ORM)
 - [Getting Started on Heroku with Java](https://devcenter.heroku.com/articles/getting-started-with-java).
+
+## Hospedando a aplicação no Heroku
+
+O Heroku permite integração com o GitHub para quando um push foi feito para tal repositório e a aplicação for compilada com sucesso, ele ser implantada/atualizada automaticamente no Heroku. Para isto funcionar, é preciso habilitar a integração com o GitHub na sua aplicação no Heroku.
+
+Se a configuração não for feita para a implantação ser feita automaticamente, você pode ver [como fazer isto manualmente aqui](https://devcenter.heroku.com/articles/git). Depois de configurar seu repositório como indicado acima, para fazer a implentação (deploy) do app, basta executar:
+
+```shell script
+git push heroku main
+```
+
+Onde `main` é o nome do branch com a versão do app que deseja implantar. Este nome pode ser `main` dependendo de como criou o repositório git.
