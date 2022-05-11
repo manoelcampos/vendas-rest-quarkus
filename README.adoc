@@ -23,7 +23,7 @@ se as configurações no arquivo link:src/main/resources/application.properties[
 
 Informações sensíveis como nome de usuário e senha (do servidor de BD, por exemplo), devem ser informadas em um arquivo `.env`. Para isto, faça uma cópia do arquivo link:.env.dist[.env.dist], renomeando para `.env` e edite tais informações neste arquivo.
 
-== Executando a aplicação no mode de desenvolvimento
+== Executando a aplicação em modo de desenvolvimento
 
 Você pode rodar sua aplicação no mode dev, que habilita o _live coding_ usando os scripts `mvnw` na raiz do projeto, de acordo com o seu SO.
 
@@ -48,7 +48,6 @@ Se der problema de permissão para execução do script, atribua tal permissão 
 [source,shell script]
 ----
 chmod +x ./mvnw
-
 ----
 
 == Windows
@@ -56,7 +55,6 @@ chmod +x ./mvnw
 [source,shell script]
 ----
 mvnw.cmd compile quarkus:dev
-
 ----
 
 == Testando os serviços REST usando extensões dos navegadores
@@ -68,7 +66,7 @@ Você pode utilizar o próprio navegador para testar seus endpoints REST. Assim,
 
 A extensão _Talend API Tester_ tem um recurso extremamente útil de permitir criar projetos e salvar diferentes requisições HTTP dentro deste projeto. Assim, podemos facilmente reenviar tais requisições sem ter que configurá-las novamente.
 
-== Packaging and running the application
+== Empacotando e executando a app para um ambiente de produção
 
 The application can be packaged using:
 
@@ -77,8 +75,7 @@ The application can be packaged using:
 ./mvnw package
 ----
 
-It produces the `quarkus-run.jar` file in the `target/quarkus-app/` directory.
-Be aware that it’s not an _über-jar_ as the dependencies are copied into the `target/quarkus-app/lib/` directory.
+It produces the `quarkus-run.jar` file in the `target/quarkus-app/` directory. Be aware that it’s not an _über-jar_ as the dependencies are copied into the `target/quarkus-app/lib/` directory.
 
 The application is now runnable using `java -jar target/quarkus-app/quarkus-run.jar`.
 
@@ -91,9 +88,10 @@ If you want to build an _über-jar_, execute the following command:
 
 The application, packaged as an _über-jar_, is now runnable using `java -jar target/*-runner.jar`.
 
-== Creating a native executable
+== Compilando um executável nativo
 
-You can create a native executable using: 
+Você pode criar um executável nativo, que não dependerá da JVM para rodar, reduzindo as exigências de espaço em disco e agilizando a inicialização e melhorando o desempenho geral da app.
+Para isto, execute:
 
 [source,shell script]
 ----
@@ -111,17 +109,6 @@ You can then execute your native executable with: `./target/vendas-1.0.0-SNAPSHO
 
 If you want to learn more about building native executables, please consult https://quarkus.io/guides/maven-tooling.
 
-== Related Guides
-
-* REST resources for Hibernate ORM with Panache (https://quarkus.io/guides/rest-data-panache[guide]): Generate JAX-RS resources for your Hibernate Panache entities and repositories
-* Hibernate ORM (https://quarkus.io/guides/hibernate-orm[guide]): Define your persistent model with Hibernate ORM and JPA
-* Hibernate Validator (https://quarkus.io/guides/validation[guide]): Validate object properties (field, getter) and method parameters for your beans (REST, CDI, JPA)
-* SmallRye OpenAPI (https://quarkus.io/guides/openapi-swaggerui[guide]): Document your REST APIs with OpenAPI - comes with Swagger UI
-* RESTEasy Reactive (https://quarkus.io/guides/resteasy-reactive[guide]): A JAX-RS implementation utilizing build time processing and Vert.x. This extension is not compatible with the quarkus-resteasy extension, or any of the extensions that depend on it.
-* Hibernate ORM with Panache (https://quarkus.io/guides/hibernate-orm-panache[guide]): Simplify your persistence code for Hibernate ORM via the active record or the repository pattern
-* Agroal - Database connection pool (https://quarkus.io/guides/datasource[guide]): Pool JDBC database connections (included in Hibernate ORM)
-* https://devcenter.heroku.com/articles/getting-started-with-java[Getting Started on Heroku with Java].
-
 == Hospedando a aplicação no Heroku
 
 O Heroku permite integração com o GitHub para quando um push foi feito para tal repositório e a aplicação for compilada com sucesso, ele ser implantada/atualizada automaticamente no Heroku. Para isto funcionar, é preciso habilitar a integração com o GitHub na sua aplicação no Heroku.
@@ -134,3 +121,15 @@ git push heroku main
 ----
 
 Onde `main` é o nome do branch com a versão do app que deseja implantar. Este nome pode ser `main` dependendo de como criou o repositório git.
+
+
+== Tutoriais sobre Quarkus e Heroku
+
+* REST resources for Hibernate ORM with Panache (https://quarkus.io/guides/rest-data-panache[guide]): Generate JAX-RS resources for your Hibernate Panache entities and repositories
+* Hibernate ORM (https://quarkus.io/guides/hibernate-orm[guide]): Define your persistent model with Hibernate ORM and JPA
+* Hibernate Validator (https://quarkus.io/guides/validation[guide]): Validate object properties (field, getter) and method parameters for your beans (REST, CDI, JPA)
+* SmallRye OpenAPI (https://quarkus.io/guides/openapi-swaggerui[guide]): Document your REST APIs with OpenAPI - comes with Swagger UI
+* RESTEasy Reactive (https://quarkus.io/guides/resteasy-reactive[guide]): A JAX-RS implementation utilizing build time processing and Vert.x. This extension is not compatible with the quarkus-resteasy extension, or any of the extensions that depend on it.
+* Hibernate ORM with Panache (https://quarkus.io/guides/hibernate-orm-panache[guide]): Simplify your persistence code for Hibernate ORM via the active record or the repository pattern
+* Agroal - Database connection pool (https://quarkus.io/guides/datasource[guide]): Pool JDBC database connections (included in Hibernate ORM)
+* https://devcenter.heroku.com/articles/getting-started-with-java[Getting Started on Heroku with Java].
