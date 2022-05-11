@@ -29,11 +29,7 @@ Você pode rodar sua aplicação no mode dev, que habilita o _live coding_ usand
 
 O _live coding_ é também conhecido como _hot reload_. Normalmente basta salvar as alterações no seu projeto e o Quarkus irá detectar as alterações, compilar e recarregar à aplicação. Tudo isso normalmente em uma fração de segundo.
 
-____
-
-*_NOTE:_* Quarkus now ships with a Dev UI, which is available in dev mode only at http://localhost:8080/q/dev/.
-
-____
+NOTE: Quarkus now ships with a Dev UI, which is available in dev mode only at http://localhost:8080/q/dev/.
 
 == Linux/macOS
 
@@ -120,7 +116,7 @@ Se a configuração não for feita para a implantação ser feita automaticament
 git push heroku main
 ----
 
-Onde `main` é o nome do branch com a versão do app que deseja implantar. Este nome pode ser `main` dependendo de como criou o repositório git.
+NOTE: `main` é o nome do branch com a versão do app que deseja implantar. Este nome pode ser `main` dependendo de como criou o repositório git.
 
 
 == Tutoriais sobre Quarkus e Heroku
