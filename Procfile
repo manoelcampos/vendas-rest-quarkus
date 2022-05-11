@@ -1,1 +1,1 @@
-web: pwd; find target/*.jar; export QUARKUS_DATASOURCE_JDBC_URL=$DATABASE_URL; java -jar target/vendas-rest-quarkus*-runner.jar
+web: QUARKUS_DATASOURCE_JDBC_URL=$DATABASE_URL java -jar target/quarkus-app/quarkus-run.jar
