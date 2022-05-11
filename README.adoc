@@ -118,7 +118,7 @@ Se a integração com o GitHub não for feita, você pode https://devcenter.hero
 git push heroku main
 ----
 
-NOTE: `main` é o nome do branch com a versão do app que deseja implantar. Este nome pode ser `main` dependendo de como criou o repositório git.
+NOTE: `main` é o nome do branch com a versão do app que deseja implantar. Este nome pode ser `master` dependendo de como criou o repositório git.
 
 Se quiser testar localmente a aplicação antes de enviar para o Heroku, pode executar `heroku local`. Assim, o cliente heroku irá executar os mesmos passos que executaria remotamente para colocar a aplicação no ar, incluindo os comandos definidos no arquivo link:Procfile[Procfile].
 
