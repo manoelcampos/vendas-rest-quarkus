@@ -13,16 +13,29 @@ Informações sensíveis como nome de usuário e senha (do servidor de BD, por e
 
 ## Executando a aplicação no mode de desenvolvimento
 
-Você pode rodar sua aplicação no mode dev, que habilita o _live coding_, usando;
-
-```shell script
-./mvnw compile quarkus:dev
-```
+Você pode rodar sua aplicação no mode dev, que habilita o _live coding_ usando os scripts `mvnw` na raiz do projeto, de acordo com o seu SO.
 
 O _live coding_ é também conhecido como _hot reload_. Normalmente basta salvar as alterações no seu projeto e o Quarkus irá detectar as alterações, compilar e recarregar à aplicação. Tudo isso normalmente em uma fração de segundo.
 
 > **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at http://localhost:8080/q/dev/.
 
+## Linux/macOS
+
+```shell script
+./mvnw compile quarkus:dev
+```
+
+Se der problema de permissão para execução do script, atribua tal permissão com: 
+
+```shell script
+chmod +x ./mvnw
+```
+
+## Windows
+
+```shell script
+mvnw.cmd compile quarkus:dev
+```
 
 ## Testando os serviços REST usando extensões dos navegadores
 
