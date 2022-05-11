@@ -87,14 +87,14 @@ The application, packaged as an _über-jar_, is now runnable using `java -jar ta
 == Compilando um executável nativo
 
 Você pode criar um executável nativo, que não dependerá da JVM para rodar, reduzindo as exigências de espaço em disco e agilizando a inicialização e melhorando o desempenho geral da app.
-Para isto, execute:
+Para isto, se você tiver a https://www.graalvm.org[GraalVM] instalada, execute:
 
 [source,shell script]
 ----
 ./mvnw package -Pnative
 ----
 
-Or, if you don't have GraalVM installed, you can run the native executable build in a container using: 
+Ou se você não tem a GraalVM mas tem o https://www.docker.com[Docker] instalado e rodando, você pode compilar um executável nativo em um contêiner usando:
 
 [source,shell script]
 ----
