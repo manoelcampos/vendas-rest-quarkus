@@ -77,6 +77,15 @@
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-agroal</artifactId>
     </dependency>
+
+    <!-- Usa banco Apache H2 em memória para o ambiente dev,
+    que não requer instalação ou configurações específicas. -->
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-jdbc-h2</artifactId>
+    </dependency>
+
+    <!-- Usa banco PostgreSQL em produção (no Heroku). -->
     <dependency>
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-jdbc-postgresql</artifactId>

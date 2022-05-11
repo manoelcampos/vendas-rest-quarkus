@@ -21,7 +21,7 @@ Se você quer aprender mais sobre Quarkus, visite https://quarkus.io.
 Antes de rodar a aplicação você deve abrir o arquivo e verificar
 se as configurações no arquivo link:src/main/resources/application.properties[application.properties] estão corretas para o seu ambiente de desenvolvimento (como o tipo de BD usado).
 
-Informações sensíveis como nome de usuário e senha (do servidor de BD, por exemplo), devem ser informadas em um arquivo `.env`. Para isto, faça uma cópia do arquivo link:.env.dist[.env.dist], renomeando para `.env` e edite tais informações neste arquivo.
+No ambiente de desenvolvimento (dev), não precisa de um arquivo `.env` pois todas as configurações necessárias estão definidas  no arquivo link:src/main/resources/application.properties[application.properties]. Em tal ambiente, está sendo usado o banco Apache H2 em memória, que não requer instalação ou configuração específica. Assim, as variáveis definidas no arquivo link:.env.dist[.env.dist], devem ser criadas apenas no seu projeto no https://heroku.com.
 
 == Executando a aplicação em modo de desenvolvimento
 
