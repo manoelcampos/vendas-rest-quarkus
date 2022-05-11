@@ -107,9 +107,11 @@ If you want to learn more about building native executables, please consult http
 
 == Hospedando a aplicação no Heroku
 
-O Heroku permite integração com o GitHub para quando um push foi feito para tal repositório e a aplicação for compilada com sucesso, ele ser implantada/atualizada automaticamente no Heroku. Para isto funcionar, é preciso habilitar a integração com o GitHub na sua aplicação no Heroku.
+Antes de começar, você precisa criar um projeto lá no Heroku e criar algumas variáveis de ambiente na página de configuração do projeto lá. Veja as instruções no arquivo link:.env.dist[]
 
-Se a configuração não for feita para a implantação ser feita automaticamente, você pode ver https://devcenter.heroku.com/articles/git[como fazer isto manualmente aqui]. Depois de configurar seu repositório como indicado acima, para fazer a implantação (deploy) da app, basta executar:
+O Heroku permite integração com o GitHub para quando um push foi feito para tal repositório e a aplicação for compilada com sucesso, ele ser implantada/atualizada automaticamente no Heroku. Para isto funcionar, é preciso habilitar essa integração na sua aplicação no Heroku.
+
+Se a integração com o GitHub não for feita, você pode https://devcenter.heroku.com/articles/git[fazer a implantação (deploy) da aplicação manualmente], sempre que for lançar uma nova versão. Depois de configurar seu repositório como indicado acima, para fazer a implantação, basta executar:
 
 [source,shell script]
 ----
