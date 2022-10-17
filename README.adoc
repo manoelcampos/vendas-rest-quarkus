@@ -64,8 +64,8 @@ Ao criar o projeto pelo https://code.quarkus.io, foram incluídas algumas depend
 
 - `quarkus-hibernate-orm`: Implementação do Hibernate da API Bean Validation para validar dados.
 - `quarkus-hibernate-validator`: Implementação do Hibernate da API Bean Validation para validar dados.
-- `quarkus-hibernate-orm-panache`: Usar padrão _Active Record_ para as classes de negócio que precisam persistir no banco, dispensando implementação de DAO/Repository. Assim, todos os métodos CRUD padrão são automaticamente fornecidos.
-- `quarkus-hibernate-orm-rest-data-panache`: Criar REST Resources de forma simplificada, apenas criando interfaces.
+- `quarkus-hibernate-orm-panache`: Usa a biblioteca https://quarkus.io/guides/hibernate-orm-panache[Quarkus Panache], que implementa o padrão _Active Record_ para as classes de negócio que precisam persistir no banco, dispensando implementação de DAO/Repository. Assim, todos os métodos CRUD padrão são automaticamente fornecidos.
+- `quarkus-hibernate-orm-rest-data-panache`: Criar https://quarkus.io/guides/rest-data-panache[REST Resources] de forma simplificada, apenas criando interfaces.
 - `quarkus-resteasy-reactive`: Implementação do padrão JAX-RS do JavaEE para fornecer serviços REST.
 - `quarkus-resteasy-reactive-jackson`: Serialização de objetos Java para JSON usando a biblioteca Jackson, que fornece recursos adicionais, como as anotações @JsonIgnore.
 - `quarkus-smallrye-openapi`: Criar documentação Swagger (OpenAPI) automaticamente.
