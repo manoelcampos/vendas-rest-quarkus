@@ -16,6 +16,11 @@ Este projeto usa o Quarkus, o *_Supersonic Subatomic Java Framework_*. A estrutu
 
 Se você quer aprender mais sobre Quarkus, visite https://quarkus.io.
 
+== Requisitos
+
+- Maven 3.8.1+
+- JDK 17+
+
 == Configurando a aplicação para execução
 
 Antes de rodar a aplicação você deve abrir o arquivo e verificar
