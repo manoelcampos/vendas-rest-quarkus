@@ -79,25 +79,30 @@ A extensão _Talend API Tester_ tem um recurso extremamente útil de permitir cr
 
 == Empacotando e executando a app para um ambiente de produção
 
-The application can be packaged using:
+Você pode empacotar o projeto (criar um arquivo jar) para distribuição usando:
 
 [source,shell script]
 ----
 ./mvnw package
 ----
 
-It produces the `quarkus-run.jar` file in the `target/quarkus-app/` directory. Be aware that it’s not an _über-jar_ as the dependencies are copied into the `target/quarkus-app/lib/` directory.
+O comando gera um arquivo `quarkus-run.jar` no diretório `target/quarkus-app/`. Tenha em mente que este não é um _über-jar_ (que inclui todas as dependências) e as dependências são copiadas para `target/quarkus-app/lib/`.
 
-The application is now runnable using `java -jar target/quarkus-app/quarkus-run.jar`.
+Desta forma, a aplicação pode ser executada com `java -jar target/quarkus-app/quarkus-run.jar`.
 
-If you want to build an _über-jar_, execute the following command:
+Se você quer criar um _über-jar_, execute o comando:
 
 [source,shell script]
 ----
 ./mvnw package -Dquarkus.package.type=uber-jar
 ----
 
-The application, packaged as an _über-jar_, is now runnable using `java -jar target/*-runner.jar`.
+Deste modo, a aplicação agora pode ser executada com:
+
+[source,shell script]
+----
+java -jar target/*-runner.jar
+----
 
 == Compilando um executável nativo
 
