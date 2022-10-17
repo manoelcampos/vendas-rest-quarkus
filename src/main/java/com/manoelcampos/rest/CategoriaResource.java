@@ -7,6 +7,10 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
 
+/**
+ * Cria um REST Resource da forma convencional, implementando manualmente cada método exposto (endpoint).
+ * @see ClienteResource
+ */
 @Path("/categoria")
 public class CategoriaResource {
 
