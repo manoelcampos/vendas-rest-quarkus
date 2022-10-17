@@ -12,7 +12,7 @@ endif::[]
 
 = Projeto de API REST Vendas usando o framework Quarkus image:https://github.com/manoelcampos/vendas-rest-quarkus/actions/workflows/maven.yml/badge.svg[maven,link=https://github.com/manoelcampos/vendas-rest-quarkus/actions/workflows/maven.yml]
 
-Este projeto usa o Quarkus, o _*Supersonic Subatomic Java Framework*_. A estrutura inicial deste projeto foi gerada em https://code.quarkus.io. Mas se você usa o IntelliJ IDEA Ultimate, ele já tem suporte nativo criar e executar projetos Quarkus. No IntelliJ Community, você pode instalar o https://plugins.jetbrains.com/plugin/13234-quarkus-tools[plugin do Quarkus]. O Visual Studio Code possui uma https://marketplace.visualstudio.com/items?itemName=redhat.vscode-quarkus[extensão para Quarkus] também. 
+Este projeto usa o Quarkus, o *_Supersonic Subatomic Java Framework_*. A estrutura inicial deste projeto foi gerada em https://code.quarkus.io. Mas se você usa o IntelliJ IDEA Ultimate, ele já tem suporte nativo criar e executar projetos Quarkus. No IntelliJ Community, você pode instalar o https://plugins.jetbrains.com/plugin/13234-quarkus-tools[plugin do Quarkus]. O Visual Studio Code possui uma https://marketplace.visualstudio.com/items?itemName=redhat.vscode-quarkus[extensão para Quarkus] também.
 
 Se você quer aprender mais sobre Quarkus, visite https://quarkus.io.
 
