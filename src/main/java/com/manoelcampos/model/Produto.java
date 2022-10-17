@@ -11,45 +11,13 @@ import javax.validation.constraints.Positive;
 public class Produto extends PanacheEntity {
     @Column(unique = true, nullable = false)
     @NotBlank
-    private String descricao;
+    String descricao;
 
     @NotNull
     @ManyToOne
-    private Categoria categoria;
+    Categoria categoria;
 
     @NotNull
     @Positive
-    private double preco;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String field) {
-        this.descricao = field;
-    }
-
-    public Categoria getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(Categoria categoria) {
-        this.categoria = categoria;
-    }
-
-    public double getPreco() {
-        return preco;
-    }
-
-    public void setPreco(double preco) {
-        this.preco = preco;
-    }
+    double preco;
 }
