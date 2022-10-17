@@ -11,13 +11,13 @@ import javax.validation.constraints.Positive;
 public class Produto extends PanacheEntity {
     @Column(unique = true, nullable = false)
     @NotBlank
-    String descricao;
+    public String descricao;
 
     @NotNull
     @ManyToOne
-    Categoria categoria;
+    public Categoria categoria;
 
     @NotNull
     @Positive
-    double preco;
+    public double preco;
 }

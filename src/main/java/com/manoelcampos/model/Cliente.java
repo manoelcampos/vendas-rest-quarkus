@@ -12,15 +12,15 @@ import javax.validation.constraints.NotNull;
 @Entity
 public class Cliente extends PanacheEntity {
     @NotNull @NotBlank
-    String nome;
+    public String nome;
 
     @Email
     @NotBlank
     @Column(unique = true, nullable = false)
-    String email;
+    public String email;
 
     @NotBlank
     @CPF
     @Column(unique = true, nullable = false)
-    String cpf;
+    public String cpf;
 }
