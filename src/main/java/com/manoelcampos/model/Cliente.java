@@ -9,6 +9,15 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+/**
+ * Classe modelo que implementa o padrão Active Record usando
+ * a biblioteca quarkus-hibernate-orm-panache.
+ *
+ * <p>Perceba que os atributos foram estranhamento definidos como públicos.
+ * Tal biblioteca faz manipulação de bytecode, adicionando mágica
+ * que faz com que, ao acessar/alterar um atributo, o respectivo getter/setter
+ * seja chamado automaticamente.</p>
+ */
 @Entity
 public class Cliente extends PanacheEntity {
     @NotNull @NotBlank
