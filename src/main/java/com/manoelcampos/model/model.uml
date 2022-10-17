@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="77.0" y="-14.0">com.manoelcampos.model.Categoria</node>
+    <node x="-65.5" y="-14.0">com.manoelcampos.model.Cliente</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic Compact" zoom="1.0" showDependencies="false" x="219.0" y="-54.5" />
+  <SelectedNodes>
+    <node>com.manoelcampos.model.Cliente</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
