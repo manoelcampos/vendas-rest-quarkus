@@ -19,7 +19,7 @@ import javax.validation.constraints.NotNull;
  * seja chamado automaticamente.</p>
  */
 @Entity
-public class Cliente extends PanacheEntity {
+public class Cliente extends AbstractEntity {
     @NotNull @NotBlank
     public String nome;
 

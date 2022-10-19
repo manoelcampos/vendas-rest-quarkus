@@ -13,7 +13,7 @@ import javax.validation.constraints.NotBlank;
  * @see Cliente
  */
 @Entity
-public class Categoria extends PanacheEntity {
+public class Categoria extends AbstractEntity {
     @Column(unique = true, nullable = false)
     @NotBlank
     public String titulo;
