@@ -126,9 +126,12 @@ Ou se você não tem a GraalVM mas tem o https://www.docker.com[Docker] instalad
 ./mvnw package -Pnative -Dquarkus.native.container-build=true
 ----
 
-You can then execute your native executable with: `./target/vendas-rest-quarkus-1.0.0-runner`
+Você pode rodar seu executável nativo com:
 
-If you want to learn more about building native executables, please consult https://quarkus.io/guides/maven-tooling.
+[source,shell script]
+----
+./target/vendas-rest-quarkus-*-runner
+----
 
 == Hospedando a aplicação no Heroku
 
