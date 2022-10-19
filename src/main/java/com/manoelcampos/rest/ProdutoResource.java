@@ -27,7 +27,7 @@ public class ProdutoResource {
 
     @POST()
     @Transactional
-    public void insert(final Produto Produto) {
-        Produto.persistAndFlush();
+    public void insert(final Produto produto) {
+        Produto.persist(produto);
     }
 }

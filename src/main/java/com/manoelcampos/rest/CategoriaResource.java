@@ -29,6 +29,6 @@ public class CategoriaResource {
     @POST()
     @Transactional
     public void insert(final Categoria categoria) {
-        categoria.persistAndFlush();
+        Categoria.persist(categoria);
     }
 }
