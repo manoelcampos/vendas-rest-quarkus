@@ -1,5 +1,6 @@
 :source-highlighter: highlightjs
 :numbered:
+:imagesdir: images
 
 ifdef::env-github[]
 :outfilesuffix: .adoc
@@ -73,9 +74,37 @@ Ao criar o projeto pelo https://code.quarkus.io, foram incluídas algumas depend
 - `quarkus-jdbc-h2`: Usa banco https://www.h2database.com[Apache H2] em memória para o ambiente dev, que não requer instalação ou configurações específicas.
 - `quarkus-jdbc-postgresql`: Usa banco PostgreSQL em produção (por exemplo no https://heroku.com).
 
-== Testando os serviços REST usando extensões dos navegadores
+== Executando os serviços REST
 
-Você pode utilizar o próprio navegador para testar seus endpoints REST. Assim, você terá uma interface amigável e intuitiva, facilitando muito os testes. A seguir são exibidas opções para Firefox e Chrome.
+=== Usando o IntelliJ
+
+No IntelliJ, ao abrir uma classe que representa um recurso REST,
+como a link:src/main/java/com/manoelcampos/rest/CategoriaResource.java[CategoriaResource], cada método que representa um endpoint
+(uma operação na sua API REST), terá um ícone de globo no lado esquerdo da declaração do método, como pode ver na imagem  aseguir.
+
+image:try-rest-endpoint-intellij.png[]
+
+Ao clicar, ele abre um editor para você digitar e enviar uma requisição HTTP para tal endpoint. No entanto, não há uma interface gráfica amigável para facilitar a criação da requisição HTTP.
+
+Se você precisar enviar um conteúdo como JSON no corpo (body) da requisição,
+precisará alterar a linha incluída pelo IntelliJ para algo como:
+
+[source,httprequest]
+----
+POST http://localhost:8080/categoria
+Content-Type: application/json
+
+{
+  "titulo": "Calçados",
+  "descricao": "Calçados masculinos, femininos e infatis"
+}
+----
+
+Para enviar a requisição, basta clicar no botão &nbsp; image:play.png[] &nbsp; do lado esquerdo.
+
+=== Usando extensões dos navegadores
+
+Você pode utilizar um browser para testar seus endpoints REST. Assim, você terá uma interface amigável e intuitiva, facilitando muito os testes. A seguir são exibidas opções para Firefox e Chrome.
 
 * Para o Firefox você pode baixar o plugin https://addons.mozilla.org/pt-BR/firefox/addon/restclient/[RESTClient].
 * Para o Google Chrome utilizo a excelente extensão https://chrome.google.com/webstore/detail/talend-api-tester-free-ed/aejoelaoggembcahagimdiliamlcdmfm[Talend API Tester (antigo Restlet Client)].
