@@ -16,5 +16,9 @@ import javax.validation.constraints.NotBlank;
 public class Categoria extends PanacheEntity {
     @Column(unique = true, nullable = false)
     @NotBlank
+    public String titulo;
+
+    @Column(nullable = false)
+    @NotBlank
     public String descricao;
 }
