@@ -1,3 +1,6 @@
+insert into marca (nome) values
+    ('LG'), ('Samsung'), ('Apple');
+
 insert into categoria (titulo, descricao) values
             ('Eletrônicos', 'Eletrônicos nacionais'),
             ('Smartphones', 'Smartphones e tablets'),
