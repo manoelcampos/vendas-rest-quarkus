@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.util.Optional;
 
 import static java.util.Objects.requireNonNull;
 
@@ -66,5 +67,11 @@ public class Cliente extends AbstractEntity {
             throw new IllegalArgumentException("Sexo deve ser M ou F");
 
         this.sexo = sexo;
+    }
+
+    public static Optional<Cliente> findByName(String name){
+        return Cliente.<Cliente>find("name", name)
+                      .stream()
+                      .findFirst();
     }
 }
