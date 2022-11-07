@@ -20,7 +20,6 @@ import java.util.List;
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public class CategoriaResource {
-
     @Operation(summary = "Obtém a lista de categorias cadastradas")
     @APIResponse(
         responseCode = "200",
@@ -32,16 +31,16 @@ public class CategoriaResource {
     }
 
     @Operation(summary = "Obtém uma categoria pelo seu número identificador")
-    @APIResponses(
-        {@APIResponse(
-                responseCode = "200",
-                description = "Categoria obtida com sucesso"
+    @APIResponses({
+        @APIResponse(
+            responseCode = "200",
+            description = "Categoria obtida com sucesso"
         ),
         @APIResponse(
             responseCode = "404",
             description = "Categoria não encontrada"
-        )}
-    )
+        )
+    })
     @GET()
     @Path("/{id}")
     public Categoria findById(
@@ -56,7 +55,6 @@ public class CategoriaResource {
         responseCode = "201",
         description = "Categoria inserida com sucesso"
     )
-
     @POST()
     @Transactional
     public void insert(
