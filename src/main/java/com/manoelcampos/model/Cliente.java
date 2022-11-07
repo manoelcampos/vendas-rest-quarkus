@@ -34,6 +34,11 @@ public class Cliente extends AbstractEntity {
     @Column(unique = true, nullable = false)
     public String cpf;
 
+    @NotNull @NotBlank
+    public String cidade;
+
+    @NotNull @NotBlank
+    public char sexo;
 
     /**
      * A biblioteca Panache inclui getters e setters durante o processo de compilação.
@@ -53,5 +58,13 @@ public class Cliente extends AbstractEntity {
      */
     public void setEmail(final String email) {
         this.email = requireNonNull(email).trim().toLowerCase();
+    }
+
+    public void setSexo(char sexo) {
+        sexo = Character.toUpperCase(sexo);
+        if(sexo != 'M' && sexo != 'F')
+            throw new IllegalArgumentException("Sexo deve ser M ou F");
+
+        this.sexo = sexo;
     }
 }
