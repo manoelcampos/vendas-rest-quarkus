@@ -11,6 +11,7 @@ import java.util.List;
  * Cria um REST Resource da forma convencional, implementando manualmente cada método exposto (endpoint).
  * @see ClienteResource
  */
+@Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 @Path("/produto")
 public class ProdutoResource {
