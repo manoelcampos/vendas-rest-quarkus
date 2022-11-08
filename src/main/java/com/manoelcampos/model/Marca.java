@@ -21,6 +21,6 @@ public class Marca extends AbstractEntity {
     public String nome;
 
     public static Optional<Marca> findByName(final String nome){
-        return Marca.<Marca>find("nome", nome).stream().findFirst();
+        return Marca.<Marca>find("nome", nome).firstResultOptional();
     }
 }
