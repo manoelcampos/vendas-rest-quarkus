@@ -4,6 +4,7 @@ import org.hibernate.validator.constraints.br.CPF;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Version;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -22,6 +23,17 @@ import static java.util.Objects.requireNonNull;
  */
 @Entity
 public class Cliente extends AbstractEntity {
+    /**
+     * Adiciona uma coluna version para criar um Lock Otimista e tentar
+     * evitar alterações simultâneas de um mesmo registro.
+     * Isto pode fazer um usuário sobrescrever dados de outro usuário.
+     * Define default 0 pois em modo dev, estamos usando um script para inserir
+     * dados no banco, que não possui a coluna version.
+     */
+    @Version
+    @Column(columnDefinition = "int default 0")
+    public Long version = 0L;
+
     @NotNull @NotBlank
     public String nome;
 
